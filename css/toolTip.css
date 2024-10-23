@@ -1,0 +1,43 @@
+/* ToolTip Styles */
+
+.text {
+    font-size: 5rem;
+    position: relative;
+    font-weight: bold;
+}
+.text::after,
+.text::before {
+    content: "";
+    position: absolute;
+    display: block;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+    pointer-events: none;
+}
+.text::after {
+    position: absolute;
+    content: attr(data-nan);
+    background-color: black;
+    top : calc(-100% - 30px);
+    white-space: nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    color: white;
+    font-size: 3.6rem;
+    padding: 1rem 2rem;
+}
+.text::before {
+    border-left: 30px solid transparent;
+    border-top: 30px solid black;
+    border-right: 30px solid transparent;
+    width: 0;
+    height: 0;
+    top: -24px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+.text:hover::after,.text:hover::before {
+    opacity: 1;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="icon" href="./images/favicon-32x32.png">
+    <!-- Css Links -->
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="./css/toolTip.css">
+    <link rel="stylesheet" href="./css/toggleSwitch.css">
+    <link rel="stylesheet" href="./css/imageMimicShadow.css">
+    <link rel="stylesheet" href="./css/tabNavigation.css">
+    <link rel="stylesheet" href="./css/sliderShow.css">
+    <link rel="stylesheet" href="./css/snakeGame.css">
+</head>
+<body>
+    <div class="main">
+        <span class="show_item">
+            <span class="show_item_previous">Previous</span>
+            <div class="item_list">
+                <span class="active">Tool Tip</span>
+                <span>Toggle Switch</span>
+                <span>Image Mimic Shadow</span>
+                <span>Tab Navigation</span>
+                <span>Slider Show</span>
+                <span>Snake Game</span>
+            </div>
+            <span class="show_item_next">Next</span>
+        </span>
+
+        <!-- Tool Tip -->
+
+        <div class="text item_display" data-nan="NANDEX">Who is the king of shadows ?</div>
+        
+        <!-- Toggle Switch -->
+
+        <div>
+           <form class="item_display-none check" action="#">
+                <label for="check">
+                    <p class="form-main-text">Do not turn me on</p>
+                    <p class="form-text">If you do that you will d%#........</p>
+                </label>
+                <input type="checkbox" name="check" id="check">
+            </form> 
+        </div>
+        
+        <!-- Image Mimic Shadow -->
+
+        <div class="card">
+            <div class=" card-img"></div>
+
+            <p class="card-title">Better life with CyperHouse</p>
+            <a href="#" class="card-link">Buy A CyperHouse</a>
+        </div>
+
+        <!-- Tab Navigation -->
+
+        <div class="allNav">
+            <div class="nav_title">Welcome To nNews</div>
+            <nav class="nav_items">
+                <span data-setContent="sport" class="nav_item-selected" >Sport</span>
+                <span data-setContent="game" >Game</span>
+                <span data-setContent="space" >Space</span>
+                <span data-setContent="technology" >Technology</span>
+                <span data-setContent="economy" >Economy</span>
+                <span data-setContent="policies" >Political</span>
+            </nav>
+            <ul class="nav_contents">
+                <li data-setContent="sport" class="nav_content-selected">Sports are a vital part of human culture, bringing people together and promoting physical and mental well-being. Whether it's the thrill of competition or the joy of teamwork, sports offer something for everyone. From the precision of tennis to the intensity of soccer, each sport has its unique appeal and challenges, inspiring athletes and fans around the world to strive for excellence.</li>
+                <li data-setContent="game">Video games have become a powerful form of entertainment, blending creativity, technology, and storytelling. They transport players into immersive worlds where they can experience adventure, solve complex puzzles, or compete in fast-paced challenges. From casual mobile games to expansive open-world adventures, video games offer endless possibilities and have evolved into a global phenomenon that connects people across cultures and generations.</li>
+                <li data-setContent="space">Planets are celestial bodies that orbit stars in defined paths. In our solar system, there are eight planets, each with unique characteristics and conditions. From tiny, scorching Mercury to the massive gas giant Jupiter, every planet is a different world full of wonders that captivate scientists and astronomy enthusiasts alike.</li>
+                <li data-setContent="technology">Technology has revolutionized the way we live, work, and connect with each other. It drives innovation across all industries, from healthcare and education to communication and entertainment. With the rapid advancements in artificial intelligence, robotics, and digital platforms, technology continues to shape the future, making our lives more efficient, convenient, and interconnected than ever before. It’s a powerful force that opens up new possibilities and transforms the world around us.</li>
+                <li data-setContent="economy">Economy is the backbone of any society, shaping the way resources are produced, distributed, and consumed. It influences the quality of life, employment opportunities, and the overall well-being of individuals and communities. From local markets to global trade networks, the economy is a dynamic system that constantly evolves in response to changes in technology, policy, and consumer behavior. Understanding the complexities of the economy is essential for making informed decisions that promote growth, stability, and prosperity for all.</li>
+                <li data-setContent="policies">Politics is the process through which societies make decisions that affect the lives of their citizens. It involves the distribution of power, the creation of laws, and the governance of communities and nations. Through debate, negotiation, and compromise, political systems seek to balance diverse interests and values to create policies that reflect the needs and aspirations of the people. Politics shapes the future of nations, influences global relations, and plays a crucial role in addressing the most pressing challenges of our time.</li>
+            </ul>
+        </div>
+
+        <!-- Slider Show -->
+
+        <div class="sliders_father">
+            <div class="sliders" id="sliders">
+                <div class="slider slideImg-active">
+                    <div class="sliderNumber">1 / 3</div>
+                    <img src="https://static.roocket.ir/images/cover/2024/3/1/aE9nP6wnSnB9ib0M1Q6HelLDM2UZtBf1Bo5LAUhu.jpg" width="100%">
+                </div>
+                <div class="slider">
+                    <div class="sliderNumber">2 / 3</div>
+                    <img src="https://static.roocket.ir/images/cover/2024/6/19/ngfuT3PJZJngG5vbLoGxDSVZKQCT5TbgVQuqmLGD.jpg" width="100%">
+                </div>
+                <div class="slider">
+                    <div class="sliderNumber">3 / 3</div>
+                    <img src="https://static.roocket.ir/images/cover/2023/12/1/nw3XiohVNzhGSoEhCTkeqNkC5nhHhq4LAbDhqnTi.jpg" width="100%">
+                </div>
+            </div>
+        </div>
+
+        <!-- Snake Game -->
+
+        <div class="snake-body">
+            <div class="snake_gameOver">
+                <span class="gameOver_text">Game Over</span>
+                <span class="gameOver_score">.</span>
+                <span class="gameOver_best">.</span>
+                <button id="snakeRetry">Retry</button>
+                <button id="snakeReset">Rest Score</button>
+            </div>
+            <span id="snake-score">0</span>
+            <canvas id="snake-canvas" width="300px" height="300px"></canvas>
+        </div>
+    </div>
+
+    <!-- JS Links -->
+
+    <script src="./js/itemShow.js"></script>
+
+    <script src="./js/tabNavigation.js"></script>
+    <script src="./js/snakeGame.js"></script>
+    <script src="./js/Slider-Show JS/slider.js"></script>
+    <script src="./js/Slider-Show JS/sliderShow.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+/* Custom Switch Button Styles */
+
+.main div form {
+    align-items: center;
+    border-radius: 10px;
+    background-color: #e9f7ff;
+    gap: 2.5rem;
+    padding: 1rem 1.5rem;
+    display: flex;
+}
+
+.main div form input {
+    margin: 1rem;
+}
+
+.form-main-text {
+    font-size: 18px;
+    margin: 10px;
+}
+
+.form-text {
+    font-size:14px ;
+    opacity: 80%;
+    margin: 10px;
+    color: #cc211e;
+}
+
+#check {
+    appearance: none;
+    background-color: #a8deff;
+    width: 3.7rem;
+    height: 2rem;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+}
+
+#check::before {
+    content: '';
+    width: 1.78rem;
+    height: 1.78rem;
+    border-radius: 10000000px;
+    background-color: #fff;
+    position: absolute;
+    transform: translate3d(2px ,2px, 0);
+    transition: transform .2s ease-in-out;
+}
+
+#check:checked {
+    background-color: #26adff;
+}
+
+#check:checked::before {
+    transform: translate3d(29px ,2px, 0);
+}
