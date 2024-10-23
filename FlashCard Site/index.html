@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Flash Card Maker</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./flash-cards.png">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="goSlide">
+
+        </div>
+        <div id="pageShow"></div>
+    </div>
+    <div class="LASTkey LASTbackwardKey">&#x21da;</div>
+    <div class="LASTkey LASTforwardKey">&#x21db;</div>
+    <div class="key backwardKey">⬅</div>
+    <div class="key forwardKey">➡</div>
+    <div class="search">
+        <div>
+            <div class="search_bar">
+                <input list="search_allItemsList" class="search_input" type="search" placeholder="Search for the word you want" required>
+                <datalist style="text-transform: capitalize;" id="search_allItemsList">
+
+                </datalist>  
+            </div>
+        </div>
+        <div class="search_content">
+            Cards will show here
+        </div>
+        <div class="search_arrow">
+            <span>&#x21c3;</span>
+            <span class="search_arrow-text">Search</span>
+            <span>&#x21c2;</span>
+        </div>
+    </div>
+    <div class="addCard_button">
+        <span>&#x2b;</span> Add a card
+    </div>
+    <div class="addCard_master">
+        <div class="addCard_success">The card successfully added</div>
+        <span class="addCard_closeIcon">&#xd7;</span>
+        <span class="addCard_title">Add a new card</span>
+        <form id="addCard_form">
+            <div class="card-master">
+                <div class="card" style="transform: rotateY(0);">
+                    <span class="word AddWord"><input id="add_word" type="text" placeholder="Word" required></span>
+                    <span class="meaning AddMean"><input id="add_meaning" type="text" placeholder="Meaning" required></span>
+
+
+                    <div style="display: none;" class="pastAndPP AddPAP">
+                        <div class="past pastAndPP_item AddPast">
+                            <span class="pastAndPP_text"><input id="add_past" type="text" placeholder="Simple Past"></span>
+                        </div>
+                        <div class="pp pastAndPP_item AddPP">
+                        <span class="pastAndPP_text"><input id="add_PP" type="text" placeholder="Past Participle"></span>
+                    </div>
+                    </div>
+                    <div style="display: none;" id="AddPluralForm" class="pluralForm AddPluralForm">
+                        <input type="text" placeholder="Plural form of word, if it's countable">
+                    </div>
+
+
+                    <span class="type AddType AddType_others">
+                        <input id="add_typeVERB" data-contentText="Verb" type="radio" name="cardType" required>
+                        <input id="add_typeNOUN" data-contentText="Noun" type="radio" name="cardType" required>
+                        <input id="add_typeADJECTIVE" data-contentText="Adjective" type="radio" name="cardType" required>
+                        <input id="add_typeADVERB" data-contentText="Adverb" type="radio" name="cardType" required>
+                    </span>
+                    <div class="synonyms AddSynonyms">
+                        <span><textarea id="add_synonyms" placeholder="Synonyms" cols="38" rows="4"></textarea></span>
+                    </div>
+                </div>
+            </div>
+            <button>Save Card</button>
+        </form>
+        
+    </div>
+    <div class="wordFile_button">
+        <button id="downloadBtn" class="wordFile_button_download" title="Download your words list">&#8676;</button>
+        <label for="uploadInput" class="wordFile_button_upload" title="Upload a word list">&#8676;</label>
+        <input style="display: none;" id="uploadInput" type="file">
+        <span class="wordFile_button_button">&#127760;</span>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="./flashMaker.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
