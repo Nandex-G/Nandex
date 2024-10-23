@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" class="font-[sans-serif]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Game</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" type="image/jpg" href="./img/—Pngtree—vector pixel button style_22804.png"/>
+</head>
+<body class="overflow-hidden flex h-screen bg-slate-200 px-10">
+    <div id="boom" class="z-10 justify-center items-center right-0 top-0 bottom-0 left-0 duration-500 w-screen h-screen bg-red-650 opacity-0 absolute hidden">
+        <div id="boom-text" class="text-white duration-[400ms] text-center text-sm">Max Power</div>
+    </div>
+    <button class="absolute w-[100px] h-10" id="reset">Reset</button>
+
+    <div id="chall" class="absolute right-0 left-0 -bottom-[440px] flex flex-col items-center duration-700">
+        <div id="chall_arrows_box" class="w-[70px] h-[40px] duration-700 rotate-180 flex flex-col overflow-hidden border-4 border-cyan-600 rounded-b-xl">
+            <div id="chall_arrows" class="duration-700 w-full h-full -translate-y-[32px] rounded-xl">
+                <div id="chall_arrow_down" class="rotate-180 duration-700 bg-cyan-500 h-full text-center flex items-center justify-center"><a href="#" id="chall_down_arrow_false" class="text-center text-2xl">V</a></div>
+                <div id="chall_arrow_up" class="bg-cyan-500 duration-700 h-full text-center flex items-center justify-center"><a href="#" id="chall_up_arrow_false" class="text-center text-2xl">V</a></div> 
+            </div>  
+        </div>
+        <div id="chall_body_border" style="scrollbar-width: none" class="duration-700 border-indigo-900 border-t-[12px] w-[650px] h-[450px] bg-indigo-500 rounded-t-xl flex flex-wrap justify-center bg-scroll overflow-auto items-center">
+            <div class="m-2 border-4 border-blue-400 bg-yellow-500 py-7 w-full rounded-3xl text-center grid grid-cols-7 ">
+                <span class="col-start-1 col-end-5 text-left ml-10">Click 1 milion times</span>
+                <div class="col-start-6 col-end-8 text-right mr-10 bg-yellow-800">Claim</div>
+            </div>
+            <div class="m-2 border-4 border-blue-400 bg-yellow-500 py-7 w-full rounded-3xl text-center">2</div>
+            <div class="m-2 border-4 border-blue-400 bg-yellow-500 py-7 w-full rounded-3xl text-center">3</div>
+            <div class="m-2 border-4 border-blue-400 bg-yellow-500 py-7 w-full rounded-3xl text-center">4</div>
+            <div class="m-2 border-4 border-blue-400 bg-yellow-500 py-7 w-full rounded-3xl text-center">5</div>
+            <div class="m-2 border-4 border-blue-400 bg-yellow-500 py-7 w-full rounded-3xl text-center">6</div>
+            <div class="m-2 border-4 border-blue-400 bg-yellow-500 py-7 w-full rounded-3xl text-center">7</div>
+            <div class="m-2 border-4 border-blue-400 bg-yellow-500 py-7 w-full rounded-3xl text-center">8</div>
+        </div>
+    </div>
+
+    <div class="flex justify-between items-center w-full h-full">
+        <div class="w-[600px] BTN text-center">
+            <div class="BTN-display">
+                <div class="justify-center flex absolute top-[50px] left-[70px] text-4xl">
+                    <span id="click-number">0</span>
+                    <span class="ml-3 text-5xl w-8 h-8"><svg xmlns="http://www.w3.org/2000/svg"  id="Layer_1" data-name="Layer 1" viewBox="0 0 109.21 122.88"><title>mouse-click</title><path d="M86,122.31a5.57,5.57,0,0,1-.9.35,5.09,5.09,0,0,1-1,.18,5.46,5.46,0,0,1-1,0,6.77,6.77,0,0,1-1-.15,6,6,0,0,1-1-.36l0,0a5.51,5.51,0,0,1-.92-.53l0,0a6.41,6.41,0,0,1-.78-.69,5.19,5.19,0,0,1-.65-.87l-9.08-14.88-7.69,9a15.49,15.49,0,0,1-1.1,1.18c-.39.37-.78.71-1.18,1l-.08.06a12.19,12.19,0,0,1-1.2.82,9.66,9.66,0,0,1-1.24.63,6.91,6.91,0,0,1-1,.37,6.21,6.21,0,0,1-1,.22,7.55,7.55,0,0,1-1.06.07,7.19,7.19,0,0,1-1-.11,6.14,6.14,0,0,1-1.18-.35,5.42,5.42,0,0,1-1.06-.57,6.22,6.22,0,0,1-.92-.78l0,0a7.31,7.31,0,0,1-.75-1l-.11-.2-.09-.21L47.72,112l0-.17L40.91,43.26a4.52,4.52,0,0,1,0-1.33,4.3,4.3,0,0,1,.43-1.25,4.31,4.31,0,0,1,1.39-1.55l0,0a3.82,3.82,0,0,1,.9-.46,4.25,4.25,0,0,1,1-.24h0a4.31,4.31,0,0,1,1.29.05,4.67,4.67,0,0,1,1.25.44l.3.16c13.51,8.84,26.1,17.06,38.64,25.25l19,12.39a11.72,11.72,0,0,1,1,.72l0,0a8.78,8.78,0,0,1,.82.73l.06.07a7.41,7.41,0,0,1,.71.82,5.91,5.91,0,0,1,.57.87,6.42,6.42,0,0,1,.51,1.14,5.6,5.6,0,0,1,.26,1.17,5.44,5.44,0,0,1,0,1.21h0a6.59,6.59,0,0,1-.23,1.19,6.54,6.54,0,0,1-.94,1.88,6.41,6.41,0,0,1-.67.83,7.45,7.45,0,0,1-.82.76,10.42,10.42,0,0,1-1.16.83,12.92,12.92,0,0,1-1.34.7c-.47.21-1,.41-1.46.58a14.27,14.27,0,0,1-1.55.43h0c-2.77.54-5.53,1.21-8.27,1.87l-3.25.77,9,14.94a5.84,5.84,0,0,1,.46,1,5.59,5.59,0,0,1,.15,3.21l0,.1a5.53,5.53,0,0,1-.33.94,6.43,6.43,0,0,1-.51.89,5.62,5.62,0,0,1-.68.81,6,6,0,0,1-.82.67l-2,1.29A83,83,0,0,1,86,122.31ZM37.63,19.46a4,4,0,0,1-6.92,4l-8-14a4,4,0,0,1,6.91-4l8.06,14Zm-15,46.77a4,4,0,0,1,4,6.91l-14,8.06a4,4,0,0,1-4-6.91l14-8.06ZM20.56,39.84a4,4,0,0,1-2.07,7.72L3,43.36A4,4,0,0,1,5,35.64l15.53,4.2ZM82,41.17a4,4,0,0,1-4-6.91L92,26.2a4,4,0,0,1,4,6.91L82,41.17ZM63.46,20.57a4,4,0,1,1-7.71-2.06L59.87,3A4,4,0,0,1,67.59,5L63.46,20.57Zm20.17,96.36,9.67-5.86c-3.38-5.62-8.85-13.55-11.51-19.17a2.17,2.17,0,0,1-.12-.36,2.4,2.4,0,0,1,1.81-2.87c5.38-1.23,10.88-2.39,16.22-3.73a10.28,10.28,0,0,0,1.8-.58,6.11,6.11,0,0,0,1.3-.77,3.38,3.38,0,0,0,.38-.38.9.9,0,0,0,.14-.24l-.06-.18a2.15,2.15,0,0,0-.44-.53,5.75,5.75,0,0,0-.83-.63L47.06,45.75c2.11,21.36,5.2,44.1,6.45,65.31a6.28,6.28,0,0,0,.18,1,2.89,2.89,0,0,0,.26.62l.13.14a1,1,0,0,0,.29,0,2.76,2.76,0,0,0,.51-.17,5.71,5.71,0,0,0,1.28-.79,11.22,11.22,0,0,0,1.35-1.33c1.93-2.27,9.6-12.14,11.4-13.18a2.4,2.4,0,0,1,3.28.82l11.44,18.75Z"/></svg></span>
+                </div>
+                <div class="flex-col flex justify-center items-center">                   
+                    <div class="rounded-full p-3  border-none text-center bg-gray-500 cursor-pointer ml-5">
+                        <button id="botton" class="group rounded-full text-center bg-red-800 cursor-pointer">
+                            <h1 id="botton-front" class="group-active:bg-red-650 leading-[normal] group-active:-translate-y-[4px] text-gray-100 text-[108px] block rounded-full py-[50px] px-[100px] translate-y-[-18px] bg-red-600">
+                                Click
+                            </h1>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="w-[600px] flex justify-center flex-col items-center pb-[100px]">
+            <div class="absolute top-12 right-16 flex items-center">          
+                <div class="flex items-center">
+                    <span id="AC-btn_lable" class="mr-5 text-xl font-bold text-blue-700">Auto Clicker</span>
+                    <div id="AC-btn" class="relative bg-red-600 w-[110px] h-[60px] rounded-full border-[5px] border-red-900 duration-500 overflow-hidden">
+                        <div class="flex items-center absolute w-full h-full bg-green-600 rounded-full">
+                            <span id="AC-on-come" style="transition: 500ms;  translate: -50px; margin-left: 12px;font-size: 20px;color: white;font-weight: bold;">ON</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;" id="AC-btn_front" class="absolute w-full h-full bg-red-600 rounded-full duration-500">
+                            <div id="AC-circle" class="relative w-1/2 h-full rounded-full duration-500 bg-black">
+                                <svg id="AC-on" class="absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="50px" height="50px"><path fill="#4caf50" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"/><path fill="#ccff90" d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"/></svg>
+                                <svg id="AC-off" class="duration-[350ms] absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="50px" height="50px"><path fill="#f44336" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"/><path fill="#fff" d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"/><path fill="#fff" d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"/></svg>
+                            </div> 
+                            <span style="transition: 500ms; margin-right: 12px;font-size: 20px;color: black;font-weight: bold;">Off</span> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="font-bold text-6xl rounded-xl p-5 flex items-center">
+                <h2 id="point" class="text-fuchsia-500">0</h2>
+                <span class="text-blue-700">$</span>
+            </div>
+            
+            <div class="upgrade-display">
+                <div class="more-money-up-back mt-5 bg-green-800 rounded-3xl">
+                    <div class="more-money-up justify-between items-center flex rounded-3xl text-2xl bg-green-700 w-[550px] py-[20px] px-[30px] text-white -translate-y-2">
+                        <span>More Money Upgrade</span>
+                        <div class="MoreMoneyUpP text-neutral-50 font-bold rounded-full p-2 mx-2 bg-indigo-700 text-nowrap">
+                            <span id="MoreMoneyUpP" >5</span>
+                            <span>$</span>
+                        </div>
+                        <button class="text-2xl border-none rounded-3xl p-0 bg-gray-500 text-indigo-700 font-bold cursor-pointer group" id="MoreMoneyUp"><span class="group-active:-translate-y-[1px] block bg-slate-200 p-2 rounded-3xl -translate-y-[5px]" id="MoreMoneyUpSpan">Upgrade</span></button>  
+                    </div>
+                </div>
+                <div class="auto-click-up-back mt-5 bg-green-800 rounded-3xl">
+                    <div class="auto-click-up justify-between items-center flex rounded-3xl text-2xl bg-green-700 w-[550px] py-[20px] px-[30px] text-white -translate-y-2">
+                        <span>Auto Click Upgrade</span>
+                        <div class="AutoClickUpP text-neutral-50 font-bold rounded-full p-2 mx-2 bg-indigo-700">
+                            <span id="AutoClickUpP" >5</span>
+                            <span id="AutoClickUpP_icon">$</span>
+                        </div>
+                        <button class="text-2xl border-none rounded-3xl p-0 bg-gray-500 text-indigo-700 font-bold cursor-pointer group" id="AutoClickUp"><span class="group-active:-translate-y-[1px] block bg-slate-200 p-2 rounded-3xl -translate-y-[5px]" id="AutoClickUpSpan">Upgrade</span></button>  
+                    </div>
+                </div>
+                <div class="-up-back mt-5 bg-green-800 rounded-3xl"></div>
+            </div>
+        </div>       
+    </div>
+
+        
+        
+
+        
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
+
+
+
+
